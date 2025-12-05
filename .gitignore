@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+# out/ <--- BARIS INI KINI DIUBAH/DIUMLAS (FOLDER 'out' AKAN DITRACKING)
 
 # production
 /build
