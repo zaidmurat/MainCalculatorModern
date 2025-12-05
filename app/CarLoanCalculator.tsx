@@ -10,8 +10,26 @@ interface CalculationResult {
     statusClass: string;
 }
 
-// 2. Fungsi Komponen Utama
-const CarLoanCalculator: React.FC = () => {
+// Gayaan untuk Footer
+const footerStyles: React.CSSProperties = {
+    width: '100%',
+    maxWidth: '550px',
+    background: '#333',
+    color: '#fff',
+    textAlign: 'center' as const,
+    padding: '15px',
+    marginTop: '20px',
+    borderRadius: '0 0 12px 12px', // Hanya bahagian bawah
+    boxShadow: '0 -2px 10px rgba(0,0,0,0.1)',
+};
+
+// 2. Fungsi Komponen Utama (EXPORT DEFAULT DI SINI)
+export default function CarLoanCalculator() { 
+// **********************************************
+// NOTE: Saya tukar ini daripada 'const CarLoanCalculator: React.FC = () =>' 
+// kepada 'export default function CarLoanCalculator()'
+// **********************************************
+
     // --- STATE MANAGEMENT ---
     // State diubah suai untuk menangani input
     const [loanAmount, setLoanAmount] = useState<number | ''>('');
@@ -282,18 +300,3 @@ const CarLoanCalculator: React.FC = () => {
         </div>
     );
 };
-
-// Gayaan untuk Footer
-const footerStyles: React.CSSProperties = {
-    width: '100%',
-    maxWidth: '550px',
-    background: '#333',
-    color: '#fff',
-    textAlign: 'center' as const,
-    padding: '15px',
-    marginTop: '20px',
-    borderRadius: '0 0 12px 12px', // Hanya bahagian bawah
-    boxShadow: '0 -2px 10px rgba(0,0,0,0.1)',
-};
-
-export default CarLoanCalculator;
